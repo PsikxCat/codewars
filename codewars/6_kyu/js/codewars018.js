@@ -20,20 +20,29 @@ n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (r
 */
 
 function longestConsec(strarr, k) {
+  // condicional de valores no validos
   if(strarr.length === 0 || k > strarr.length || k <= 0) return '';
   
   let longStr = '';
-  let newStr = '';
 
   for(let i = 0; i < strarr.length; i++) {
-    newStr = strarr.slice(i, i+k);
-    console.log(newStr);
-    if(newStr.length.join('') > longStr.length) {
-      longStr = newStr;
+    // valor de la 'tajada' con los dos str a concatenar
+    let newStr = strarr.slice(i, i+k);
+    // si el lenght de la concatenacion actual es mayor al lenght de la anterior, almacena en variable
+    if(newStr.join('').length > longStr.length) {
+      longStr = newStr.join('');
     }
-
   }
-  return newStr;
+  return longStr;
 }
-console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2)
-);
+console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2));
+
+
+// Codewars Solution 
+function longestConsec2(strarr, k) {
+  return k <= 0 || k > strarr.length ? "" : strarr
+  .map((value, index) => (
+    strarr.slice(index, index+k).join('')))
+  .reduce((longest, current) => current.length > longest.length ? current : longest)
+} // destacar la organizacion 
+console.log(longestConsec2(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2));
