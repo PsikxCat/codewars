@@ -19,6 +19,13 @@ function alphabetPosition(text) {
     let letterCode = text.toUpperCase().charCodeAt(i);
     letterCode > 64 && letterCode < 91 ? result += (letterCode - 64) + ' ' : null;
   }
-  return result
+  return result.slice(0, result.length - 1)
 }
 console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
+
+// CodeWars Solution
+const alphabetPosition2 = (text) =>
+  text.toLowerCase().split('').map(a => a.charCodeAt(0) - 96).filter(a => a > 0 && a < 27).join(' ');
+
+console.log(alphabetPosition2("The sunset sets at twelve o' clock."));
