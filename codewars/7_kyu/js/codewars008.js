@@ -18,12 +18,13 @@ const highAndLow = (numbers) => {
   const high = numbers.split(' ').reduce((a, b) => +a > +b ? a : b);
   const low = numbers.split(' ').reduce((a, b) => +a < +b ? a : b);
   return `${high} ${low}`;
-};
+}
 
 console.log(highAndLow('1 9 42 3 4 -5'));
 
+
 // solution 2
-function highAndLow2(numbers) {
+function highAndLow2(numbers){
   numbers = numbers.split(' ');
   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }

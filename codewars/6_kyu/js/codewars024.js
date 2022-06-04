@@ -15,14 +15,14 @@ Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 1
 
 function alphabetPosition(text) {
   let result = '';
-  for (let i = 0; i < text.length; i++) {
-    const letterCode = text.toUpperCase().charCodeAt(i);
-    // eslint-disable-next-line no-unused-expressions
+  for(let i = 0; i < text.length; i++) {
+    let letterCode = text.toUpperCase().charCodeAt(i);
     letterCode > 64 && letterCode < 91 ? result += (letterCode - 64) + ' ' : null;
   }
-  return result.slice(0, result.length - 1);
+  return result.slice(0, result.length - 1)
 }
 console.log(alphabetPosition("The sunset sets at twelve o' clock."));
+
 
 // CodeWars Solution
 const alphabetPosition2 = (text) =>

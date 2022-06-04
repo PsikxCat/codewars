@@ -6,22 +6,25 @@ Complete the function that takes a string as an argument representing the curren
 For example, update_light('green') should return 'yellow'.
  */
 
-const updateLight = (crr) =>
+const updateLight = (crr) => 
   crr === 'green' ? 'yellow' : crr === 'yellow' ? 'red' : 'green';
 
 console.log(updateLight('red'));
 
+
 // other solution
-const lights = ['green', 'yellow', 'red'];
+const lights = ['green', 'yellow', 'red']
 
 function updateLight2(current) {
-  if (typeof current !== 'string') { throw new TypeError(`${current} is not of type string`); };
+  if (typeof current !== 'string') 
+    throw new TypeError(`${current} is not of type string`)
 
-  if (!lights.includes(current)) { throw new RangeError(`${current} can only be set to "red", "yellow" or "green"`); };
+  if (!lights.includes(current)) 
+    throw new RangeError(`${current} can only be set to "red", "yellow" or "green"`)
 
-  const indexOfLight = lights.indexOf(current);
+  const indexOfLight = lights.indexOf(current)
 
-  return lights[(indexOfLight + 1) % (lights.length)];
+  return lights[(indexOfLight + 1) % (lights.length)]
 }
 
 console.log(updateLight2('red'));

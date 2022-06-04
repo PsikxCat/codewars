@@ -11,10 +11,11 @@ XO("zzoo") => false
 Fundamentals
  */
 
-const XO = (str) =>
-  str.toUpperCase().split('').filter(i => i === 'X').length === str.toUpperCase().split('').filter(i => i === 'O').length;
+const XO = (str) => 
+  str.toUpperCase().split('').filter(i => i === 'X').length !== str.toUpperCase().split('').filter(i => i === 'O').length ? false : true;
 
 console.log(XO('xxooox'));
+
 
 // solution 2
 function XO2(str) {

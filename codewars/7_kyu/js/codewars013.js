@@ -9,7 +9,8 @@ const quarterOf = (month) => month < 4 ? 1 : month < 7 ? 2 : month < 10 ? 3 : 4;
 
 console.log(quarterOf(11));
 
+
 // solution 2
-const quarterOf2 = (month) => Math.ceil(month / 3);
+const quarterOf2 = (month) => Math.ceil(month/3);
 
 console.log(quarterOf2(11));

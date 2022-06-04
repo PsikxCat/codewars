@@ -5,9 +5,9 @@ String will never be empty and you do not need to account for different data typ
 
 */
 
-function findShort(s) {
-  const short = s.split(' ').sort((a, b) => a.length - b.length);
-  return short[0].length;
+function findShort(s){
+  let short = s.split(' ').sort((a, b) => a.length - b.length);
+  return short[0].length
 }
 
 console.log(findShort('Cuando miras largo tiempo hacia el abismo, el abismo también mira dentro de ti'));
