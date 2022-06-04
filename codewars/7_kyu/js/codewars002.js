@@ -6,12 +6,11 @@ For example, if we run 9119 through the function, 811181 will come out, because 
 Note: The function accepts an integer and returns an integer
 */
 
-const squareDigits = (num) => +(num+'').split('').map(x => x**2).join('');
+const squareDigits = (num) => +(num + '').split('').map(x => x ** 2).join('');
 
 console.log(squareDigits(91322));
 
-
-function squareDigits2(num) { 
-  return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
+function squareDigits2(num) {
+  return Number(('' + num).split('').map(function (val) { return val * val; }).join(''));
 }
 console.log(squareDigits2(91322));

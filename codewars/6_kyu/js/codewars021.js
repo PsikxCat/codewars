@@ -12,13 +12,16 @@ Examples(Operator, value1, value2) --> output
 */
 
 const basicOp = (operation, value1, value2) =>
-  operation === '+' ? value1 + value2 : operation === '-' ? value1 - value2 :
-  operation === '*' ? value1 * value2 : operation === '/' ? value1 / value2 : 0;
+  operation === '+'
+    ? value1 + value2
+    : operation === '-'
+      ? value1 - value2
+      : operation === '*' ? value1 * value2 : operation === '/' ? value1 / value2 : 0;
 
 console.log(basicOp('/', 49, 7));
 
-
-// CodeWars Solution 
-const basicOp2 = (operation, value1, value2) => eval(value1 + operation + value2);
+// CodeWars Solution
+// eslint-disable-next-line no-eval
+const basicOp2 = (operation, value1, value2) => eval(value1 + operation + value2);// eva can be harmful.
 
 console.log(basicOp2('/', 49, 7));

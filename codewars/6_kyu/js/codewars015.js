@@ -8,14 +8,13 @@ uniqueInOrder('ABBCcAD')         == ['A', 'B', 'C', 'c', 'A', 'D']
 uniqueInOrder([1,2,2,3,3])       == [1,2,3]
  */
 
-const uniqueInOrder = (iterable) =>{
+const uniqueInOrder = (iterable) => {
   // aseguramos de convertir un posible string en array para iterarlo
-  let strToArr = Array.isArray(iterable) ? iterable : iterable.split('');
+  const strToArr = Array.isArray(iterable) ? iterable : iterable.split('');
   // solo devolvera valor en caso de que los elementos de los indices enfrentados sean diferentes
-  return strToArr.filter((crr, i) => strToArr[i] !== strToArr[i + 1] ? true : false);
-}
+  return strToArr.filter((crr, i) => strToArr[i] !== strToArr[i + 1]);
+};
 console.log(uniqueInOrder('AAAABBBCCDAABBB'));
-
 
 // CodeWars Solution
 const uniqueInOrder2 = iterable => [...iterable].filter((v, i) => iterable[i] !== iterable[i + 1]);
