@@ -13,7 +13,7 @@ function rentalCarCost(d) {
   const DESC_3_DAYS = 20;
   const DESC_7_DAYS = 50;
 
-  return d * COST_FOR_DAY - (d >= 7 ? DESC_7_DAYS : (d >= 3 ? DESC_3_DAYS : 0))
+  return d * COST_FOR_DAY - (d >= 7 ? DESC_7_DAYS : (d >= 3 ? DESC_3_DAYS : 0));
 }
 
 console.log(rentalCarCost(7));

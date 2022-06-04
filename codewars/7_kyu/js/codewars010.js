@@ -15,8 +15,7 @@ const DNAtoRNA = (dna) => dna.split('').map(i => i === 'T' ? 'U' : i).join('');
 
 console.log(DNAtoRNA('GCAT'));
 
-
 // solution 2
-const DNAtoRNA2 = (dna) => dna.split("T").join('U');
+const DNAtoRNA2 = (dna) => dna.split('T').join('U');
 
 console.log(DNAtoRNA2('GCAT'));

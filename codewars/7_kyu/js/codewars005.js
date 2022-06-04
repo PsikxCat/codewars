@@ -12,22 +12,18 @@ const strCount = (str, lt) => str.split('').filter(x => x === lt).length;
 
 console.log(strCount('Hello', 'l'));
 
-
 // solution 2
-function strCount2(str, letter){  
-  
+function strCount2(str, letter) {
   let count = 0;
-  
+
   for (let i = 0; i < str.length; i++) {
-    if (str[i] == letter)
-      count++;
+    if (str[i] === letter) { count++; }
   }
-  
+
   return count;
 }
 
 console.log(strCount2('Hello', 'l'));
-
 
 // solution 3
 const strCount3 = (str, letter) => str.split(letter).length - 1;

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /**
 strarr = ["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2
 
@@ -10,7 +11,7 @@ blueabcdef   ("      10)  concatenation of strarr[3] and strarr[4]
 abcdefuvwxyz ("      12)  concatenation of strarr[4] and strarr[5]
 
 Two strings are the longest: "folingtrashy" and "abcdefuvwxyz".
-The first that came is "folingtrashy" so 
+The first that came is "folingtrashy" so
 longest_consec(strarr, 2) should return "folingtrashy".
 
 In the same way:
@@ -21,28 +22,29 @@ n being the length of the string array, if n = 0 or k > n or k <= 0 return "" (r
 
 function longestConsec(strarr, k) {
   // condicional de valores no validos
-  if(strarr.length === 0 || k > strarr.length || k <= 0) return '';
-  
+  if (strarr.length === 0 || k > strarr.length || k <= 0) return '';
+
   let longStr = '';
 
-  for(let i = 0; i < strarr.length; i++) {
+  for (let i = 0; i < strarr.length; i++) {
     // valor de la 'tajada' con los dos str a concatenar
-    let newStr = strarr.slice(i, i+k);
+    const newStr = strarr.slice(i, i + k);
     // si el lenght de la concatenacion actual es mayor al lenght de la anterior, almacena en variable
-    if(newStr.join('').length > longStr.length) {
+    if (newStr.join('').length > longStr.length) {
       longStr = newStr.join('');
     }
   }
   return longStr;
 }
-console.log(longestConsec(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2));
+console.log(longestConsec(['tree', 'foling', 'trashy', 'blue', 'abcdef', 'uvwxyz'], k = 2));
 
-
-// Codewars Solution 
+// Codewars Solution
 function longestConsec2(strarr, k) {
-  return k <= 0 || k > strarr.length ? "" : strarr
-  .map((value, index) => (
-    strarr.slice(index, index+k).join('')))
-  .reduce((longest, current) => current.length > longest.length ? current : longest)
-} // destacar la organizacion 
-console.log(longestConsec2(["tree", "foling", "trashy", "blue", "abcdef", "uvwxyz"], k = 2));
+  return k <= 0 || k > strarr.length
+    ? ''
+    : strarr
+      .map((value, index) => (
+        strarr.slice(index, index + k).join('')))
+      .reduce((longest, current) => current.length > longest.length ? current : longest);
+} // destacar la organizacion
+console.log(longestConsec2(['tree', 'foling', 'trashy', 'blue', 'abcdef', 'uvwxyz'], k = 2));

@@ -12,6 +12,7 @@ number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 
  */
 
-const number = (array) => array.map((x, i) => x = `${i+1}: ${x}`)
+// eslint-disable-next-line no-return-assign
+const number = (array) => array.map((x, i) => x = `${i + 1}: ${x}`);
 
-console.log(number(['a','b','c','d']));
+console.log(number(['a', 'b', 'c', 'd']));

@@ -1,4 +1,4 @@
-/* 
+/*
 In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 Examples
 
@@ -13,8 +13,7 @@ const makeNegative = num => num > 0 ? -num : num;
 console.log(makeNegative(34));
 console.log(makeNegative(-34));
 
-
 const makeNegative2 = num => -Math.abs(num);
 
 console.log(makeNegative(34));
-console.log(makeNegative(-34));
+console.log(makeNegative2(-34));

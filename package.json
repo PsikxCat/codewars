@@ -1,0 +1,27 @@
+{
+  "name": "01_git-codewars",
+  "version": "1.0.0",
+  "description": "Prueba Eslint en repo codewars",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PsikxCat/codewars.git"
+  },
+  "keywords": [],
+  "author": "psikocat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PsikxCat/codewars/issues"
+  },
+  "homepage": "https://github.com/PsikxCat/codewars#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.1",
+    "eslint-plugin-promise": "^6.0.0"
+  }
+}
