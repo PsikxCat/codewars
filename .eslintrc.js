@@ -4,12 +4,16 @@ module.exports = {
     es2021: true
   },
   extends: [
+    'plugin:vue/essential',
     'standard'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
+  plugins: [
+    'vue'
+  ],
   rules: {
     semi: ['error', 'always'],
     'space-before-function-paren': ['error', {
@@ -17,5 +21,6 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always'
     }]
+
   }
 };
