@@ -41,3 +41,6 @@ function printerError2(s) {
   }
   return m + '/' + s.length;
 }
+
+console.log(printerError2('aaabbbbhaijjjm'));
+console.log(printerError2('aaaxbbbbyyhwawiwjjjwwm'));
