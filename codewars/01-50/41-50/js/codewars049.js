@@ -38,7 +38,7 @@ function accum3(s) {
     }
     result.push(str);
   }
-  return result;
+  return result.join('-');
 }
 
 console.log(accum3('abcd'));
