@@ -43,3 +43,22 @@ const gimme3 = (arr) => arr.indexOf([...arr].sort((x, y) => x - y)[1]);
 
 console.log(gimme3([2, 3, 1]));
 console.log(gimme3([5, 10, 14]));
+
+const char = 'abyzABYZ';
+
+// ! De character a ASCII usando charCodeAt()
+const toUnicode = (char) =>
+  [...char].map(x => x.charCodeAt());
+
+console.log(toUnicode(char));
+
+//
+const unicode = toUnicode(char);
+console.log(unicode);
+//
+
+// ! De ASCII a character usando
+const toChar = (arr) => {
+  String.fromCharCode(arr.join());
+};
+console.log(toChar(unicode));
